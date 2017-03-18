@@ -1,0 +1,30 @@
+
+function love.load()   
+end
+
+function love.update(dt)
+   
+end
+
+function love.draw()
+   
+end
+
+function love.focus(bool) -- if you click out of the game, the game will 'unfocus' and may be used to pause the game if you tab out! (Bool)	
+end
+
+function love.keypressed (key, unicode) -- key is a key "a", unicode is the c
+
+end
+
+function love.keyreleased (key, unicode)
+end
+
+function love.mousepressed (x, y, button) -- origin is top left, button r is right, l is left
+end
+
+function love.mousepressed (x,y, button)
+end
+
+function love.quit()
+end
