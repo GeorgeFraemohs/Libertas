@@ -49,11 +49,16 @@ function love.update(dt)
 player.act_y = player.act_y - ((player.act_y - player.grid_y) * player.speed * dt)
 player.act_x = player.act_x - ((player.act_x - player.grid_x) * player.speed * dt)
 
+camera:setPosition(player.grid_x - (love.graphics.getWidth()/2), player.grid_y - (love.graphics.getHeight()/2) )
+
 	
 	
 end
 
 function love.draw()   
+
+  camera:set()
+
    for i=1,100 do
       for j=1,100 do
 			  love.graphics.draw(Tileset, Quads[board[i][j]], (j-1)*TileW, (i-1)*TileH)
@@ -67,9 +72,9 @@ function love.draw()
     
     love.graphics.rectangle("fill", player.act_x, player.act_y, 32, 32)
     
-   
-
-      
+      -- draw stuff
+  camera:unset()
+ 
 end
 
 
