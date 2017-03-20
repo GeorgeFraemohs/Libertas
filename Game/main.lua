@@ -161,7 +161,9 @@ if key == "right" then
 player.grid_x = player.grid_x + 32
 if player.grid_x > 3200 - (width/2) then player.grid_x = 3200 - (width/2); end
 end
-
+if key == "escape" then
+love.window.close( )
+end
 end
 
 function love.keyreleased (key, unicode)
